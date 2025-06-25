@@ -25,13 +25,15 @@ class DayDataAdapter extends TypeAdapter<DayData> {
       protein: fields[5] as int,
       carbs: fields[6] as int,
       fat: fields[7] as int,
+      meals: (fields[8] as List?)?.cast<MealEntry>(),
+      exercises: (fields[9] as List?)?.cast<ExerciseEntry>(),
     );
   }
 
   @override
   void write(BinaryWriter writer, DayData obj) {
     writer
-      ..writeByte(8)
+      ..writeByte(10)
       ..writeByte(0)
       ..write(obj.year)
       ..writeByte(1)
@@ -47,7 +49,11 @@ class DayDataAdapter extends TypeAdapter<DayData> {
       ..writeByte(6)
       ..write(obj.carbs)
       ..writeByte(7)
-      ..write(obj.fat);
+      ..write(obj.fat)
+      ..writeByte(8)
+      ..write(obj.meals)
+      ..writeByte(9)
+      ..write(obj.exercises);
   }
 
   @override
