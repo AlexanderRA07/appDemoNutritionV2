@@ -117,6 +117,7 @@ import 'package:hive/hive.dart';
 
 import '../data/exercise_entry.dart';
 import '../data/day.dart';
+import '../sidebar/drawer.dart';
 
 class ExerciseScreen extends StatefulWidget {
   const ExerciseScreen({super.key});
@@ -204,7 +205,7 @@ class _ExerciseScreenState extends State<ExerciseScreen> {
       const SnackBar(content: Text('Exercise saved!')),
     );
 
-    Navigator.pop(context); // optional: go back after saving
+    //Navigator.pop(context); // optional: go back after saving
   }
 
   @override
@@ -213,6 +214,7 @@ class _ExerciseScreenState extends State<ExerciseScreen> {
 
     return Scaffold(
       appBar: AppBar(title: const Text('Log Exercise')),
+      drawer: const AppDrawer(),
       body: GestureDetector(
         onTap: () => FocusScope.of(context).unfocus(),
         child: Center(

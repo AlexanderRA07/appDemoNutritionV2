@@ -126,6 +126,7 @@ import 'package:hive/hive.dart';
 
 import '../data/meal_entry.dart';
 import '../data/day.dart';
+import '../sidebar/drawer.dart';
 
 class MealScreen extends StatefulWidget {
   const MealScreen({super.key});
@@ -217,7 +218,7 @@ class _MealScreenState extends State<MealScreen> {
       const SnackBar(content: Text('Meal saved!')),
     );
 
-    Navigator.pop(context); // optional: go back after saving
+    //Navigator.pop(context); // optional: go back after saving
   }
 
   @override
@@ -226,6 +227,7 @@ class _MealScreenState extends State<MealScreen> {
 
     return Scaffold(
       appBar: AppBar(title: const Text('Log Meal')),
+      drawer: const AppDrawer(),
       body: GestureDetector(
         onTap: () => FocusScope.of(context).unfocus(),
         child: Center(

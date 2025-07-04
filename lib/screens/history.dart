@@ -64,6 +64,7 @@ import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 
 import '../data/day.dart';
+import '../sidebar/drawer.dart';
 
 class HistoryScreen extends StatefulWidget {
   const HistoryScreen({super.key});
@@ -107,6 +108,7 @@ class _HistoryScreenState extends State<HistoryScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('View History')),
+      drawer: const AppDrawer(),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(

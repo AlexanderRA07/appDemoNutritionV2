@@ -1,6 +1,7 @@
 // // // update.dart
 import 'package:flutter/material.dart';
 import '../data/user.dart';
+import '../sidebar/drawer.dart';
 
 class UpdateScreen extends StatefulWidget {
   const UpdateScreen({super.key});
@@ -87,18 +88,7 @@ class _UpdateScreenState extends State<UpdateScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text("Update Info")),
-      drawer: Drawer(
-        child: ListView(
-          children: [
-            ListTile(title: const Text("Home"), onTap: () => Navigator.pushReplacementNamed(context, '/home')),
-            ListTile(title: const Text("Add Meal"), onTap: () => Navigator.pushReplacementNamed(context, '/add-meal')),
-            ListTile(title: const Text("Add Exercise"), onTap: () => Navigator.pushReplacementNamed(context, '/add-exercise')),
-            ListTile(title: const Text("View History"), onTap: () => Navigator.pushReplacementNamed(context, '/history')),
-            ListTile(title: const Text("Stats"), onTap: () => Navigator.pushReplacementNamed(context, '/stats')),
-            ListTile(title: const Text("Dev Tools"), onTap: () => Navigator.pushReplacementNamed(context, '/dev-tools')),
-          ],
-        ),
-      ),
+      drawer: const AppDrawer(),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Form(
@@ -225,7 +215,7 @@ class _UpdateScreenState extends State<UpdateScreen> {
                     ScaffoldMessenger.of(context).showSnackBar(
                       const SnackBar(content: Text("Info saved!")),
                     );
-                    Navigator.pushReplacementNamed(context, '/home');
+                //    Navigator.pushReplacementNamed(context, '/home');
                   }
                 },
                 child: const Text("Save"),
