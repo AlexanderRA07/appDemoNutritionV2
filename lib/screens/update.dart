@@ -1,4 +1,4 @@
-// // // update.dart
+// update.dart
 import 'package:flutter/material.dart';
 import '../data/user.dart';
 import '../sidebar/drawer.dart';
@@ -169,7 +169,7 @@ class _UpdateScreenState extends State<UpdateScreen> {
                   setState(() {
                     _selectedSex = value;
                     UserData.sex = value ?? '--';
-                    _calculateMetrics(); // recalculate if sex changes
+                    _calculateMetrics();
                   });
                 },
                 decoration: const InputDecoration(labelText: "Sex"),

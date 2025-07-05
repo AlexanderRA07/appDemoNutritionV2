@@ -1,3 +1,5 @@
+//meal_entry.dart
+
 import 'package:hive/hive.dart';
 
 part 'meal_entry.g.dart';

@@ -1,3 +1,5 @@
+//exercise_entry.dart
+
 import 'package:hive/hive.dart';
 
 part 'exercise_entry.g.dart';
