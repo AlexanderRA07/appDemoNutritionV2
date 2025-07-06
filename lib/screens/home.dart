@@ -75,10 +75,10 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
         Table(
           border: TableBorder.all(),
           columnWidths: const {
-            0: FlexColumnWidth(2),
+            0: FlexColumnWidth(1.8),
             1: FlexColumnWidth(2),
             2: FlexColumnWidth(2),
-            3: FlexColumnWidth(1),
+            3: FlexColumnWidth(1.2),
           },
           children: [
             const TableRow(
